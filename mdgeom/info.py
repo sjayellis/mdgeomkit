@@ -58,4 +58,21 @@ def summary(*universe):
     print(table)
     
 def extract(universe):
-    pass
+    try:
+        Lx, Ly, Lz, alpha, beta, gamma = u.dimensions
+    except TypeError:
+        # universe without a regular box
+        Lx, Ly, Lz, alpha, beta, gamma = 0, 0, 0, 0, 0, 0
+    data = {
+        "n_atoms": u.atoms.n_atoms,
+        "Lx": Lx,
+        "Ly": Ly,
+        "Lz": Lz,
+        "alpha": alpha,
+        "beta": beta,
+        "gamma": gamma,
+        "n_frames": u.trajectory.n_frames,
+        "totaltime": u.trajectory.totaltime,
+        "dt": u.trajectory.dt,
+    }
+    return data
