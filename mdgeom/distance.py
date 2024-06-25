@@ -17,3 +17,5 @@ angles :math:`alpha`, :math:`beta`, :math:`gamma`).
 
 import numpy as np
 
+def _check_groups(a, b):
+    pass
