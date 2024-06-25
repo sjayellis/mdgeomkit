@@ -21,7 +21,7 @@ mdgeomkit
 [url_license]: https://www.gnu.org/licenses/gpl-2.0
 [url_mda]: https://www.mdanalysis.org
 
-Simple geometric analysis of MD trajectories with MDAnalysis.
+Simple geometric analysis of MD trajectories with MDAnalysis. This toolkit was made as a demo for the 2024 MDAnalysis/MolSSI workshop.
 
 mdgeomkit is bound by a [Code of Conduct](https://github.com/sjayellis/mdgeomkit/blob/main/CODE_OF_CONDUCT.md).
 

@@ -22,3 +22,11 @@ import numpy as np
 def _check_groups(a, b):
     if a.n_atoms != b.n_atoms:
         raise ValueError("AtomGroups a and b contain different number of atoms")
+        
+    if a.dimensions is None and b.dimensions is None:
+        # it's ok when both AtomGroups have no unitcell
+        pass
+    elif (a.dimensions is None) != (b.dimensions is None):  # xor
+        raise ValueError("One AtomGroup does not have unit cell information")
+    elif not np.allclose(a.dimensions, b.dimensions):
+        raise ValueError("Unit cell dimensions differ between groups.")
