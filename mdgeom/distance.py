@@ -18,6 +18,9 @@ angles :math:`alpha`, :math:`beta`, :math:`gamma`).
 import numpy as np
 
 def _check_groups(a, b):
+    if a.n_atoms != b.n_atoms:
+        raise ValueError("AtomGroups a and b contain different number of atoms")
+        
     if a.dimensions is None and b.dimensions is None:
         # it's ok when both AtomGroups have no unitcell
         pass
