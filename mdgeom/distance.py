@@ -15,7 +15,7 @@ lengths of the box :math:`L_x`, :math:`L_y`, and :math:`L_z` and the three
 angles :math:`alpha`, :math:`beta`, :math:`gamma`).
 """
 
-# this is a comment.
+# this is a comment. More text
 
 import numpy as np
 
